@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="160" viewBox="0 0 720 160" preserveAspectRatio="xMidYMid meet">
+  <!-- Fundo (pode ficar transparente trocando a cor para 'none') -->
+  <rect width="100%" height="100%" fill="#07030a"/>
+
+  <!-- estilo simples -->
+  <defs>
+    <linearGradient id="commitGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#8e44ad"/>
+      <stop offset="1" stop-color="#6f2db8"/>
+    </linearGradient>
+
+    <!-- máscara para "cortar" commit quando chega à boca -->
+    <mask id="mouthMask">
+      <!-- tudo branco = visível -->
+      <rect width="100%" height="100%" fill="white"/>
+      <!-- área preta = transparente (cortada) -->
+      <!-- a boca estará em x ~140, y ~70 (coordenadas do desenho) -->
+      <circle cx="150" cy="85" r="22" fill="black"/>
+    </mask>
+
+    <!-- animação de abertura de boca (pequeno efeito) via transform no grupo da cabeça -->
+  </defs>
+
+  <!-- commits: retângulos que se deslocam da direita para a esquerda -->
+  <g id="commits" mask="url(#mouthMask)">
+    <!-- Repetimos 5 commits com tempos deslocados -->
+    <!-- commit template: rectangle (x animates) + label -->
+    <!-- commit 1 -->
+    <g>
+      <rect x="760" y="45" width="90" height="50" rx="8" fill="url(#commitGrad)">
+        <animate attributeName="x" from="760" to="120" dur="6s" begin="0s" repeatCount="indefinite" />
+        <!-- desaparece ao alcançar a boca (x ~150) -->
+        <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.83;1" dur="6s" begin="0s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- commit 2 -->
+    <g>
+      <rect x="940" y="45" width="90" height="50" rx="8" fill="#9b59b6">
+        <animate attributeName="x" from="940" to="120" dur="6.2s" begin="0.9s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.83;1" dur="6.2s" begin="0.9s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- commit 3 -->
+    <g>
+      <rect x="1120" y="45" width="90" height="50" rx="8" fill="#7b3aa8">
+        <animate attributeName="x" from="1120" to="120" dur="6.4s" begin="1.8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.83;1" dur="6.4s" begin="1.8s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- commit 4 -->
+    <g>
+      <rect x="1300" y="45" width="90" height="50" rx="8" fill="#a064d1">
+        <animate attributeName="x" from="1300" to="120" dur="6.6s" begin="2.6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.83;1" dur="6.6s" begin="2.6s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- commit 5 -->
+    <g>
+      <rect x="1480" y="45" width="90" height="50" rx="8" fill="#8f4dbb">
+        <animate attributeName="x" from="1480" to="120" dur="6.8s" begin="3.4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.83;1" dur="6.8s" begin="3.4s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+
+  <!-- chão / trilho -->
+  <rect x="0" y="110" width="100%" height="6" fill="#1b0b1f" opacity="0.7"/>
+
+  <!-- minhoquinha: segmentos -->
+  <g id="minho" transform="translate(120,60)">
+    <!-- corpo: círculos que oscilam -->
+    <g id="body">
+      <!-- 6 segmentos com animação de leve sobe/desce -->
+      <circle cx="20" cy="40" r="12" fill="#b48bd8">
+        <animate attributeName="cy" dur="1.2s" values="40;36;40" repeatCount="indefinite" begin="0s" />
+      </circle>
+      <circle cx="44" cy="40" r="14" fill="#a569d2">
+        <animate attributeName="cy" dur="1.2s" values="40;34;40" repeatCount="indefinite" begin="0.12s" />
+      </circle>
+      <circle cx="72" cy="40" r="16" fill="#8e44ad">
+        <animate attributeName="cy" dur="1.2s" values="40;32;40" repeatCount="indefinite" begin="0.24s" />
+      </circle>
+      <circle cx="104" cy="40" r="14" fill="#a064d1">
+        <animate attributeName="cy" dur="1.2s" values="40;36;40" repeatCount="indefinite" begin="0.36s" />
+      </circle>
+      <circle cx="132" cy="40" r="12" fill="#caa1e8">
+        <animate attributeName="cy" dur="1.2s" values="40;38;40" repeatCount="indefinite" begin="0.48s" />
+      </circle>
+    </g>
+
+    <!-- cabeça com boca -->
+    <g id="head" transform="translate(160,40)">
+      <!-- cabeça -->
+      <ellipse cx="0" cy="0" rx="22" ry="18" fill="#f2e6ff">
+        <animateTransform attributeName="transform" type="translate" values="0,0; -2,0; 0,0" dur="0.6s" repeatCount="indefinite"/>
+      </ellipse>
+
+      <!-- olho -->
+      <circle cx="-6" cy="-4" r="3.2" fill="#0b0b0b"/>
+      <circle cx="-5" cy="-5" r="1.1" fill="#fff" opacity="0.7"/>
+
+      <!-- boca: anima abertura com path clipping -->
+      <g transform="translate(4,6)">
+        <!-- parte superior da boca -->
+        <path d="M -12 0 Q -6 10 0 10" fill="#44124b" opacity="0.95">
+          <animate attributeName="d" dur="0.6s" values="M -12 0 Q -6 10 0 10; M -12 -2 Q -6 10 0 10; M -12 0 Q -6 10 0 10" repeatCount="indefinite"/>
+        </path>
+        <!-- parte inferior (lingua) -->
+        <path d="M -12 0 Q -6 14 0 10 L -12 0" fill="#b81fb8" opacity="0.9">
+          <animate attributeName="d" dur="0.6s" values="M -12 0 Q -6 14 0 10 L -12 0; M -12 2 Q -6 16 0 10 L -12 2; M -12 0 Q -6 14 0 10 L -12 0" repeatCount="indefinite"/>
+        </path>
+      </g>
+    </g>
+  </g>
+
+  <!-- texto opcional -->
+  <text x="20" y="20" fill="#d7b8ff" font-size="12" font-family="Segoe UI, Roboto, Arial">minhoquinha comendo commits</text>
+
+</svg>
