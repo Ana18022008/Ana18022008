@@ -119,6 +119,6 @@
   </g>
 
   <!-- texto opcional -->
-  <text x="20" y="20" fill="#d7b8ff" font-size="12" font-family="Segoe UI, Roboto, Arial">minhoquinha comendo commits</text>
+  <text x="20" y="20" fill="#d7b8ff" font-size="12" font-family="Segoe UI, Roboto, Arial"></text>
 
 </svg>
