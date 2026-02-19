@@ -15,7 +15,7 @@
 ---
 
 ## 💜 Sobre mim
-- 👩‍💻 Meu nome é **Ana Beatriz**, tenho **17 anos**.  
+- 👩‍💻 Meu nome é **Ana Beatriz**, tenho **18 anos**.  
 - 🏙️ Nasci em **São Paulo**, mas atualmente moro em **Jaraguá do Sul - SC**.  
 - 📚 Faço o curso de **Desenvolvimento de Sistemas** pela **WEG**.  
 - 🎶 Amo **escutar músicas**.  
@@ -70,3 +70,4 @@
   <img src="./minhoquinha.svg" />
 
 </p>
+
