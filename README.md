@@ -56,7 +56,4 @@
   </a>
 </p>
 
-eu ADORO o emanuel filipi bueno de souza, meu melhor amigo
-
-
 
