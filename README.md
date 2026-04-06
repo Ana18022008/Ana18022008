@@ -20,8 +20,11 @@
 
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,js,html,css,python,mysql,git,docker,vscode,idea" />
+  <img src="https://skillicons.dev/icons?i=eclipse,figma,idea,vscode,docker,androidstudio,arduino,postman,notion,git,linux" />
+  <br>
+  <img src="https://skillicons.dev/icons?i=java,html,css,js,ts,mysql,python,bootstrap,tailwind,kotlin" />
 </p>
+
 
 
 
