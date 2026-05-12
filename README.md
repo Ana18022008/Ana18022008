@@ -6,15 +6,20 @@
 </p>
 
 About Me
+
 I'm Ana Beatriz, an 18-year-old Systems Development student at WEG — one of Brazil's largest industrial technology companies.
 I'm focused on building solid foundations across backend development, mobile, and UI/UX, with a strong interest in writing clean, maintainable code and working on real-world applications.
 
-🎓 Currently enrolled in Systems Development at WEG
-🛠️ Mainly working with Java, JavaScript/TypeScript, and Kotlin
-📱 Exploring mobile development with Android Studio
-🌱 Always learning — currently diving deeper into Docker and REST APIs
+<br>
 
+- Systems Development student at WEG — a Brazilian industrial technology company with global operations
+- Core stack: Java, JavaScript/TypeScript, and Kotlin
+- Currently deepening knowledge in Docker, REST APIs, and software architecture principles
+- Interested in Artificial Intelligence and its practical applications in software development
 
+<br>
+    
+ 
 Tech Stack
 Tools & Environments
 <p>
@@ -25,11 +30,6 @@ Languages & Frameworks
   <img src="https://skillicons.dev/icons?i=java,kotlin,python,js,ts,html,css,bootstrap,tailwind,mysql" />
 </p>
 
-GitHub Stats
-<p align="center">
-  <img height="150em" src="https://github-readme-stats.vercel.app/api?username=Ana18022008&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true"/>
-  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ana18022008&layout=compact&theme=tokyonight&hide_border=true"/>
-</p>
 
 Connect with Me
 <p>
